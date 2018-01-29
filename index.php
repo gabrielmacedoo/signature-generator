@@ -99,94 +99,115 @@ else: ?><!DOCTYPE html>
             code {
                 font-size: 80%;
             }
+
+            .navbar-default {
+                background-color: #ffffff;
+
+            }
         </style>
 
     </head>
 
     <body>
 
-        <!-- Wrap all page content here -->
-        <div id="wrap">
+    <!-- Wrap all page content here -->
+    <div id="wrap" class="pinnacle-wrapper">
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
 
-            <!-- Fixed navbar -->
-            <div class="navbar navbar-default navbar-fixed-top">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#">Signature Generator</a>
-                    </div>
+                        <img src="https://s3.us-east-2.amazonaws.com/pinnacle-advertising-client-email-files/EmailSignatures/Pinnacle+Signatures/images/sig-logo.gif" width="165" height="59">
+                    </a>
+
                 </div>
             </div>
-
-            <!-- Begin page content -->
-            <div class="container">
-                <div class="page-header">
-                    <h1>Simple Signature Generator</h1>
+        </div>
+        <!-- Begin page content -->
+        <div class="container">
+            <div class="page-header">
+                <h1 class="main-header"> Signature Generator</h1>
+            </div>
+            <form role="form" method="post" target="preview" id="form">
+                <div class="row">
+                    <!-- Personal information -->
+                    <div class="col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <label for="Name">Full Name</label>
+                            <input type="text" class="form-control" id="Name" name="Sender[name]"
+                                   placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="Email">Email</label>
+                            <input type="email" class="form-control" id="Email" name="Sender[email]"
+                                   placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label for="Phone">Phone Number</label>
+                            <input type="phone" class="form-control phone" id="personalPhone" name="Sender[phone]"
+                                   placeholder="+XX (XX) XXXX-XXXX">
+                        </div>
+                    </div>
+                    <!--Company Information -->
+                    <div class="col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <label for="Phone"> Company Phone </label>
+                            <input type="phone" class="form-control phone" id="companyPhone"
+                                   name="Sender[company_phone]" placeholder="+XX (XX) XXXX-XXXX" value="(561) 338-3940">
+                        </div>
+                        <div class="form-group">
+                            <label for="Phone"> Position in Company </label>
+                            <input type="phone" class="form-control" id="Phone" name="Sender[position]"
+                                   placeholder="Web Developer" value="">
+                        </div>
+                    </div>
                 </div>
-                <form role="form" method="post" target="preview" id="form">
-                    <div class="form-group">
-                        <label for="Name">Name</label>
-                        <input type="text" class="form-control" id="Name" name="Sender[name]" placeholder="Enter your name">
-                    </div>
-                    <div class="form-group">
-                        <label for="Email">Email</label>
-                        <input type="email" class="form-control" id="Email" name="Sender[email]" placeholder="Enter your email">
-                    </div>
-                    <div class="form-group">
-                        <label for="Phone">Telefone</label>
-                        <input type="phone" class="form-control" id="Phone" name="Sender[phone]" placeholder="+XX (XX) XXXX-XXXX">
-                    </div>
-                    <div class="form-group">
-                        <label for="Mobile">Celular</label>
-                        <input type="phone" class="form-control" id="Mobile" name="Sender[mobile]" placeholder="+XX (XX) XXXXX-XXXX">
-                    </div>
-                    <div class="form-group">
-                        <label for="Website">Display website</label>
-                        <input type="checkbox" class="form-control" id="Website" name="Sender[website]">
-                    </div>
 
-                    <button id="preview" type="submit" class="btn btn-default">Preview</button>
-                    <button id="download" class="btn btn-default">Download</button>
-                    <input type="hidden" name="download" id="will-download" value="">
-                </form>
-            </div>
-
-            <div class="container">
-                <iframe src="about:blank" name="preview" width="100%" height="200"></iframe>
-            </div>
-
+                <!--action buttons -->
+                <button id="preview" type="submit" class="btn btn-default">Preview</button>
+                <button id="download" class="btn btn-default">Download</button>
+                <input type="hidden" name="download" id="will-download" value="">
+            </form>
         </div>
-
-        <div id="footer">
-            <div class="container">
-                <p class="text-muted credit">developed by <a href="http://www.lucasms.net/">Lucas Machado</a>.</p>
-            </div>
+        <div class="container">
+            <!-- preview box -->
+            <iframe src="about:blank" name="preview" width="100%" height="500"></iframe>
         </div>
+    </div>
 
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
 
-        <!-- Bootstrap core JavaScript
-        ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-        <script type="text/javascript">
-        $( document ).ready(function() {
-            $("#download").bind( "click", function() {
-                $('#will-download').val('true');
-                $('#form').removeAttr('target').submit();
+        $(document).ready(function () {
+
+                $("#download").bind("click", function () {
+                    $('#will-download').val('true');
+                    $('#form').removeAttr('target').submit();
+                });
+
+                $("#preview").bind("click", function () {
+                    $('#will-download').val('');
+                    $('#form').attr('target', 'preview');
+                });
+
+                /*  Phone Number Masking */
+            $("input.phone").keyup(function() {
+                $(this).val($(this).val().replace(/^(\d{3})(\d{3})(\d)+$/, "($1) $2-$3"));
             });
 
-            $("#preview").bind( "click", function() {
-                $('#will-download').val('');
-                $('#form').attr('target','preview');
             });
 
-        });
-        </script>
+    </script>
     </body>
 </html>
 <?php endif;
