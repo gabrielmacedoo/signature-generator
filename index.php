@@ -158,7 +158,7 @@ else: ?><!DOCTYPE html>
                 <div class="col-sm-6 col-md-6">
 
                     <div class="form-group">
-                        <label for="logo"> Company LOGO URL </label>
+                        <label for="Logo"> Company LOGO URL </label>
                         <input type="text" class="form-control phone" id="logo"
                                name="Sender[logo]" placeholder="" value="">
                     </div>
@@ -175,13 +175,13 @@ else: ?><!DOCTYPE html>
                     </div>
 
                     <div class="form-group">
-                        <label for="web"> Website URL/LINK ( Include HTTP/HTTPS ) </label>
+                        <label for="Web"> Website URL/LINK ( Include HTTP/HTTPS ) </label>
                         <input type="text" class="form-control" id="web" name="Sender[web]"
                                placeholder="http://thiswebsite.com" value="">
                     </div>
 
                     <div class="form-group">
-                        <label for="webshow"> Website Display Name </label>
+                        <label for="Webshow"> Website Display Name </label>
                         <input type="text" class="form-control" id="webshow" name="Sender[webshow]"
                                placeholder="wwww.thiswebsite.com" value="">
                     </div>
@@ -189,32 +189,34 @@ else: ?><!DOCTYPE html>
                 </div>
 
                 <div class="clearfix"><!-- SOCIAL MEDIA LINKS --></div>
-
+                <br>
+                <hr>
+                <br>
                 <div class="col-md-6">
 
                     <!-- ADDRESS INFORMATION -->
                     <h2 class="text-center"> Address Information </h2>
 
                     <div class="form-group">
-                        <label for="street"> Street Address </label>
+                        <label for="Street"> Street Address </label>
                         <input type="text" class="form-control" id="street" name="Sender[street]"
                                placeholder="1565 S. Federal Highway" value="">
                     </div>
 
                     <div class="form-group">
-                        <label for="city"> City </label>
+                        <label for="City"> City </label>
                         <input type="text" class="form-control" id="city" name="Sender[city]"
                                placeholder="West Palm Beach" value="">
                     </div>
 
                     <div class="form-group">
-                        <label for="state"> State </label>
+                        <label for="State"> State </label>
                         <input type="text" class="form-control" id="state" name="Sender[state]" placeholder="FL"
                                value="">
                     </div>
 
                     <div class="form-group">
-                        <label for="zip"> Zip Code </label>
+                        <label for="Zip"> Zip Code </label>
                         <input type="text" class="form-control" id="zip" name="Sender[zip]" placeholder="33455"
                                value="">
                     </div>
