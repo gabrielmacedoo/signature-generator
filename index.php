@@ -160,7 +160,7 @@ else: ?><!DOCTYPE html>
                     <div class="form-group">
                         <label for="Logo"> Company LOGO URL </label>
                         <input type="text" class="form-control phone" id="logo"
-                               name="Sender[logo]" placeholder="" value="">
+                               name="Sender[logo]" placeholder="" value="https://raw.githubusercontent.com/mohmadhabib/signature-generator/version2/imgs/logo.png">
                     </div>
 
                     <div class="form-group">
